@@ -19,9 +19,10 @@ public class EndMenu : MonoBehaviour
         
     }
 
-    public void EndLevel()
+    public void EndLevel(int nbHumansSaved)
     {
         menu.SetActive(true);
+        print($"You saved {nbHumansSaved} humans!");
 
         // TODO: calcul de la nouvelle confiance
     }
