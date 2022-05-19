@@ -19,17 +19,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (gameIsPaused)
-            {
-                gameIsPaused = false;
-                Time.timeScale = 1f;
-            }
-            else
-            {
-                gameIsPaused = true;
-                Time.timeScale = 0f;
-            }
-
+            gameIsPaused = !gameIsPaused;
             menu.SetActive(gameIsPaused);
         }
     }
@@ -38,20 +28,17 @@ public class PauseMenu : MonoBehaviour
     {
         gameIsPaused = false;
         menu.SetActive(false);
-        Time.timeScale = 1f;
     }
 
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameIsPaused = false;
-        Time.timeScale = 1f;
     }
 
     public void Quit()
     {
         SceneManager.LoadScene("MainMenu");
         gameIsPaused = false;
-        Time.timeScale = 1f;
     }
 }
