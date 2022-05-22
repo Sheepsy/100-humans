@@ -6,6 +6,7 @@ public class EndLevel : MonoBehaviour
 {
     [SerializeField] EndMenu EndMenu;
 
+    public int nbHumansForLevel;
     public int nbHumansAlive;
     private int nbHumansFinished;
 
@@ -31,7 +32,7 @@ public class EndLevel : MonoBehaviour
 
             if (nbHumansFinished == nbHumansAlive)
             {
-                EndMenu.EndLevel(nbHumansFinished);
+                EndMenu.EndLevel(nbHumansForLevel, nbHumansFinished);
             }
         }
     }
