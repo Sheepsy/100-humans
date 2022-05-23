@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class TrustManagemer : MonoBehaviour
 {
-
     // Le nombre de morts total depuis le début de la partie
     public int deaths = 0;
     
@@ -34,5 +33,4 @@ public class TrustManagemer : MonoBehaviour
         
         return trustLevel;
     }
-
 }

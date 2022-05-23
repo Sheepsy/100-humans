@@ -10,6 +10,8 @@ public class InitHumans : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HumansManager.nbLeft = HumansManager.nbTrust + HumansManager.nbUntrust;
+
         for (int i = 0; i < HumansManager.nbTrust; i++)
             Instantiate(trustfulHuman, new Vector3(-8f + 0.25f * i, 1, 0), Quaternion.identity);
         for (int i = 0; i < HumansManager.nbUntrust; i++)
