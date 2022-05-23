@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8410724d19363a143ace3d72f769466e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndMenu: {fileID: 0}
+  EndMenu: {fileID: 1947956138}
 --- !u!1001 &500903847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,6 +438,10 @@ PrefabInstance:
       propertyPath: trustManager
       value: 
       objectReference: {fileID: 1947956139}
+    - target: {fileID: 1247170040317322927, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
+      propertyPath: nextLevelButton
+      value: 
+      objectReference: {fileID: 1381468572}
     - target: {fileID: 2469154920115310757, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
       propertyPath: m_Name
       value: LevelMenu
@@ -485,6 +489,10 @@ PrefabInstance:
     - target: {fileID: 4744308295208078056, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431742874603621716, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
@@ -550,6 +558,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb83812aa0fb0b246bc6181b82a6c249, type: 3}
+--- !u!1 &1381468572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5431742874603621716, guid: d1533833c0e84e04f9b92bae24c05f61, type: 3}
+  m_PrefabInstance: {fileID: 541140055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1475856994
 GameObject:
   m_ObjectHideFlags: 0

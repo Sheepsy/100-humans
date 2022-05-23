@@ -20,6 +20,9 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("MiniGame1");
+        HumansManager.nbTrust = 50;
+        HumansManager.nbUntrust = 50;
+        HumansManager.nbAlive = 100;
     }
 
     public void Quit()

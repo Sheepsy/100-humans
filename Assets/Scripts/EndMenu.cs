@@ -9,6 +9,7 @@ public class EndMenu : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] TrustManager trustManager;
     [SerializeField] TextMeshProUGUI title;
+    [SerializeField] GameObject nextLevelButton;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class EndMenu : MonoBehaviour
         int nbHumansTotal = HumansManager.nbBeginningLevel;
         int nbHumansSaved = HumansManager.nbSavedLevel;
         title.text = $"Congratulations!\nYou saved {nbHumansSaved} humans from the {nbHumansTotal}!";
+        nextLevelButton.SetActive(HumansManager.nbAlive != 0);
 
         // Calcul de la nouvelle confiance
         float trustLevel = trustManager.computeTrustLevel();
