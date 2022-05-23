@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
+    [SerializeField] private EndMenu EndMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,10 @@ public class DeathZone : MonoBehaviour
     {
         if (other.tag == "Human")
         {
-            HumansManager.nbDeadTotal++;
-            print("A human is dead...");
-            if (other.gameObject.trust)
+            HumansManager.nbAlive--;
+            HumansManager.nbDeadLevel++;
+            HumansManager.nbLeftLevel--;
+            if (other.gameObject.GetComponent<ControlHumans>().trust)
             {
                 HumansManager.nbTrust--;
             }
@@ -31,11 +34,11 @@ public class DeathZone : MonoBehaviour
                 HumansManager.nbUntrust--;
             }
             Destroy(other.gameObject);
+            print("A human is dead...");
 
             if (HumansManager.nbLeftLevel == 0)
             {
-                int nbHumansForLevel = 
-                EndMenu.EndLevel(nbHumansForLevel, nbHumansFinished);
+                EndMenu.EndLevel();
             }
         }
     }

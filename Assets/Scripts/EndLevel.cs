@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    [SerializeField] EndMenu EndMenu;
-
-    public int nbHumansForLevel;
-    public int nbHumansAlive;
-    private int nbHumansFinished;
+    [SerializeField] private EndMenu EndMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-        nbHumansFinished = 0;
+
     }
 
     // Update is called once per frame
@@ -26,13 +22,14 @@ public class EndLevel : MonoBehaviour
     {
         if (other.tag == "Human")
         {
-            nbHumansFinished++;
+            HumansManager.nbSavedLevel++;
+            HumansManager.nbLeftLevel--;
             print("Another Human saved!");
             other.gameObject.SetActive(false);
 
-            if (nbHumansFinished == nbHumansAlive)
+            if (HumansManager.nbLeftLevel == 0)
             {
-                EndMenu.EndLevel(nbHumansForLevel, nbHumansFinished);
+                EndMenu.EndLevel();
             }
         }
     }
