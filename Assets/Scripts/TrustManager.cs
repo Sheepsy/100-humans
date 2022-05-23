@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-public class TrustManagemer : MonoBehaviour
+public class TrustManager : MonoBehaviour
 {
-
     // Le nombre de morts total depuis le début de la partie
     public int deaths = 0;
     
@@ -15,7 +14,9 @@ public class TrustManagemer : MonoBehaviour
     // Le niveau de confiance, correspondant à la probabilité, au début du niveau, qu'un humain suive le curseur
     public float trustLevel = 100;
 
-    public float trustUpdate(int nbDeathsCurrentTurn) {
+    public float computeTrustLevel() {
+        int nbDeathsCurrentTurn = HumansManager.nbDeadLevel;
+
         // On met à jour le nombre de morts total
         deaths = (deaths + nbDeathsCurrentTurn);
 
@@ -35,4 +36,20 @@ public class TrustManagemer : MonoBehaviour
         return trustLevel;
     }
 
+    public void updateHumansTrust(float trustLevel)
+    {
+        HumansManager.nbTrust = 0;
+        HumansManager.nbUntrust = 0;
+        for (int i = 0; i < HumansManager.nbAlive; i++)
+        {
+            if (Random.Range(0, 100) < trustLevel)
+            {
+                HumansManager.nbTrust++;
+            }
+            else
+            {
+                HumansManager.nbUntrust++;
+            }
+        }
+    }
 }

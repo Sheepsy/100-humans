@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndLevel : MonoBehaviour
+public class DeathZone : MonoBehaviour
 {
     [SerializeField] private EndMenu EndMenu;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -22,10 +22,19 @@ public class EndLevel : MonoBehaviour
     {
         if (other.tag == "Human")
         {
-            HumansManager.nbSavedLevel++;
+            HumansManager.nbAlive--;
+            HumansManager.nbDeadLevel++;
             HumansManager.nbLeftLevel--;
-            print("Another Human saved!");
-            other.gameObject.SetActive(false);
+            if (other.gameObject.GetComponent<ControlHumans>().trust)
+            {
+                HumansManager.nbTrust--;
+            }
+            else
+            {
+                HumansManager.nbUntrust--;
+            }
+            Destroy(other.gameObject);
+            print("A human is dead...");
 
             if (HumansManager.nbLeftLevel == 0)
             {

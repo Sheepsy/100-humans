@@ -7,7 +7,7 @@ public class ControlHumans : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxClickDistance;
-    [SerializeField] private bool trust = true;
+    public bool trust = true;
 
     // Start is called before the first frame update
     void Start()
