@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
     [SerializeField] TrustManager trustManager;
+    [SerializeField] TextMeshProUGUI title;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +27,9 @@ public class EndMenu : MonoBehaviour
         menu.SetActive(true);
         int nbHumansTotal = HumansManager.nbBeginningLevel;
         int nbHumansSaved = HumansManager.nbSavedLevel;
-        print($"You saved {nbHumansSaved} humans from the {nbHumansTotal}!");
+        title.text = $"Congratulations!\nYou saved {nbHumansSaved} humans from the {nbHumansTotal}!";
 
-        // TODO: calcul de la nouvelle confiance
+        // Calcul de la nouvelle confiance
         float trustLevel = trustManager.computeTrustLevel();
         trustManager.updateHumansTrust(trustLevel);
     }
