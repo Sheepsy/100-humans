@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4316029561355375798}
   m_Layer: 0
   m_Name: EndLevel
-  m_TagString: Untagged
+  m_TagString: EndZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,4 +115,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndMenu: {fileID: 0}
-  nbHumansAlive: 0

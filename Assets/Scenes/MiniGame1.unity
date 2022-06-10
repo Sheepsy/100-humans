@@ -550,6 +550,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb83812aa0fb0b246bc6181b82a6c249, type: 3}
+--- !u!1 &1423200621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060047021573001180, guid: fb83812aa0fb0b246bc6181b82a6c249, type: 3}
+  m_PrefabInstance: {fileID: 1097029217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1423200624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423200621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e61db8f9cf11443bfb10c9d9f1c1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beacon: {fileID: 3552408757241292972, guid: 3171f6c0f15e3bb4a80938f4eccdffbf, type: 3}
+  maxBeacons: 5
+  beaconLifeSpan: 5
 --- !u!1 &1475856994
 GameObject:
   m_ObjectHideFlags: 0

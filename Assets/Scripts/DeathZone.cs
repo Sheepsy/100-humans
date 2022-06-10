@@ -25,7 +25,7 @@ public class DeathZone : MonoBehaviour
             HumansManager.nbAlive--;
             HumansManager.nbDeadLevel++;
             HumansManager.nbLeftLevel--;
-            if (other.gameObject.GetComponent<ControlHumans>().trust)
+            if (other.gameObject.GetComponent<ControlHumans>().IsFollower())
             {
                 HumansManager.nbTrust--;
             }
