@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moving_Labyrinth
       objectReference: {fileID: 0}
+    - target: {fileID: 7209760414478899047, guid: 1096c76a8cdf26841ba0fdf268d551d2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9151864282548830377, guid: 1096c76a8cdf26841ba0fdf268d551d2, type: 3}
       propertyPath: speed
       value: 0.005
