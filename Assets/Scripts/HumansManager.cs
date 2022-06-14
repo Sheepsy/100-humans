@@ -8,6 +8,8 @@ public static class HumansManager
     public static int nbTrust = 50;
     public static int nbUntrust = 50;
     public static int nbAlive = 100;
+    public static int nbCollectibleTrust = 2;
+    public static int nbCollectibleUntrust = 2;
 
     // For each level
     public static int nbBeginningLevel;
