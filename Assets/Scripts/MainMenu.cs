@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("MiniGame1");
+        SceneManager.LoadScene("Management_Menu");
     }
 
     public void Quit()
