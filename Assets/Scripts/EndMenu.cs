@@ -34,7 +34,14 @@ public class EndMenu : MonoBehaviour
 
     public void Next()
     {
-        SceneManager.LoadScene("MiniGame1");
+        if (++HumansManager.currentLvl < 4)
+        {
+            SceneManager.LoadScene("Management_menu");
+        }
+        else
+        {
+            Quit();
+        }
     }
 
     public void Quit()

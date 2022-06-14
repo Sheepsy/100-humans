@@ -857,6 +857,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3ee89bf6beaa444872b449b5e4580e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LvlMaps:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   nb_Trust: {fileID: 8327669321261121451}
   nb_Untrust: {fileID: 5673728984699859627}
   nb_CollectibleTrust: {fileID: 764177767462992601}

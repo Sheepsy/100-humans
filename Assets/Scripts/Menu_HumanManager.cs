@@ -6,6 +6,8 @@ using TMPro;
 
 public class Menu_HumanManager : MonoBehaviour
 {
+    [SerializeField] List<Sprite> LvlMaps;
+
     [SerializeField] TextMeshProUGUI nb_Trust;
     [SerializeField] TextMeshProUGUI nb_Untrust;
     [SerializeField] TextMeshProUGUI nb_CollectibleTrust;
@@ -18,7 +20,7 @@ public class Menu_HumanManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("MiniGame1");
+        SceneManager.LoadScene("Lvl" + (HumansManager.currentLvl + 1).ToString());
     }
 
     public void SwapTrust()

@@ -11,6 +11,8 @@ public static class HumansManager
     public static int nbCollectibleTrust = 2;
     public static int nbCollectibleUntrust = 2;
 
+    public static int currentLvl = 0;
+
     // For each level
     public static int nbBeginningLevel;
     public static int nbLeftLevel;

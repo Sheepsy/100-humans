@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1805416792403629979}
   - component: {fileID: -6321364203920552733}
   - component: {fileID: 6827424521940757430}
-  - component: {fileID: -3065386330628996959}
   m_Layer: 0
   m_Name: DeadlyObstacle
   m_TagString: Trap
@@ -126,17 +125,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndMenu: {fileID: 0}
---- !u!114 &-3065386330628996959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2446000958255881514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d514fabe2f0e40443bce2daf9c849d22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pos: {fileID: 612053882706698407}
-  speed: 0.01
