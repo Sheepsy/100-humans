@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Beacon
   - Human
+  - EndZone
+  - Obstacle
+  - Trap
   layers:
   - Default
   - TransparentFX
