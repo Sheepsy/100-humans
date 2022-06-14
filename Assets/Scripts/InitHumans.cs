@@ -6,6 +6,7 @@ public class InitHumans : MonoBehaviour
 {
     public GameObject trustfulHuman;
     public GameObject untrustfulHuman;
+    [SerializeField] Vector2 initPos;
 
     // Start is called before the first frame update
     void Start()
@@ -34,12 +35,12 @@ public class InitHumans : MonoBehaviour
             nbCols = HumansManager.nbAlive;
         }
 
-        float xStart = -0.5f * nbCols / 2f;
+        float xStart = initPos.x - 0.5f * nbCols / 2f;
         if (nbCols % 2 == 0)
         {
             xStart += 0.25f;
         }
-        float yStart = 0.5f * nbRows / 2f;
+        float yStart = initPos.y + 0.5f * nbRows / 2f;
         if (nbRows % 2 == 0)
         {
             yStart -= 0.25f;
