@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class InitHumans : MonoBehaviour
 {
-    public GameObject trustfulHuman;
-    public GameObject untrustfulHuman;
+    public GameObject follower;
+    public GameObject explorer;
+    public Transform spawnZoneTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -14,8 +15,9 @@ public class InitHumans : MonoBehaviour
         HumansManager.nbLeftLevel = HumansManager.nbBeginningLevel;
         HumansManager.nbDeadLevel = 0;
         HumansManager.nbSavedLevel = 0;
+        HumansManager.isLevelStarted = false;
 
-        SpawnHumans();
+        SpawnCreatures();
     }
 
     // Update is called once per frame
@@ -24,52 +26,39 @@ public class InitHumans : MonoBehaviour
         
     }
 
-    // Properly spawns all the humans
-    private void SpawnHumans()
+    private void SpawnCreatures()
     {
-        int nbRows = HumansManager.nbAlive / 10;
-        int nbCols = 10;
-        if (nbRows == 1)
+        float yFollower = spawnZoneTransform.position.y - spawnZoneTransform.localScale.y / 2 + 0.5f;
+        float yExplorer = spawnZoneTransform.position.y + spawnZoneTransform.localScale.y / 2 - 0.5f;
+        float xLeft = spawnZoneTransform.position.x - spawnZoneTransform.localScale.x / 6f;
+        float xRight = spawnZoneTransform.position.x + spawnZoneTransform.localScale.x / 6f;
+        int halfTrust = HumansManager.nbTrust / 2;
+        int halfUntrust = HumansManager.nbUntrust / 2;
+
+        for (int i = 0; i < halfTrust; i++)
         {
-            nbCols = HumansManager.nbAlive;
+            Instantiate(follower, new Vector3(xLeft, yFollower + 0.5f * i, 0), Quaternion.identity);
+        }
+        if (halfTrust % 2 == 1)
+        {
+            halfTrust++;
+        }
+        for (int i = 0; i < halfTrust; i++)
+        {
+            Instantiate(follower, new Vector3(xRight, yFollower + 0.5f * i, 0), Quaternion.identity);
         }
 
-        float xStart = -0.5f * nbCols / 2f;
-        if (nbCols % 2 == 0)
+        for (int i = 0; i < halfUntrust; i++)
         {
-            xStart += 0.25f;
+            Instantiate(explorer, new Vector3(xRight, yExplorer - 0.5f * i, 0), Quaternion.identity);
         }
-        float yStart = 0.5f * nbRows / 2f;
-        if (nbRows % 2 == 0)
+        if (halfUntrust % 2 == 1)
         {
-            yStart -= 0.25f;
+            halfUntrust++;
         }
-
-        int x = 0;
-        int y = 0;
-        int spawned = 0;
-        while (spawned < HumansManager.nbTrust)
+        for (int i = 0; i < halfUntrust; i++)
         {
-            Instantiate(trustfulHuman, new Vector3(xStart + 0.5f * x, yStart - 0.5f * y, 0), Quaternion.identity);
-            spawned++;
-            x++;
-            if (x == 10)
-            {
-                x = 0;
-                y++;
-            }
-        }
-        spawned = 0;
-        while (spawned < HumansManager.nbUntrust)
-        {
-            Instantiate(untrustfulHuman, new Vector3(xStart + 0.5f * x, yStart - 0.5f * y, 0), Quaternion.identity);
-            spawned++;
-            x++;
-            if (x == 10)
-            {
-                x = 0;
-                y++;
-            }
+            Instantiate(explorer, new Vector3(xLeft, yExplorer - 0.5f * i, 0), Quaternion.identity);
         }
     }
 }

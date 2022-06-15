@@ -100,11 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e33f52ea1454c468274a8fe865a90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endZoneTransform: {fileID: 8367934700569764724, guid: c9372e8ea29735c42a9e0c4b0b7e2531, type: 3}
-  moveSpeed: 2
+  spawnZoneTransform: {fileID: 1061511206166753838, guid: e7fdf711980834549b2a56cf0ec42727, type: 3}
+  endZoneTransform: {fileID: 8367934700569764724, guid: 7f68c8da38ed1db44bfe1ae7b80be132, type: 3}
+  moveSpeed: 1
   explorerDetectionRange: 0
   explorer: 0
-  derivationFactor: 0.5
+  derivationFactor: 0
 --- !u!50 &2030085778541989755
 Rigidbody2D:
   serializedVersion: 4

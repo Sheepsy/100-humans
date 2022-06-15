@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6ad02ab1af4094e8e15874b37e4385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trustfulHuman: {fileID: 2030085778541989638, guid: b25d1124f8ab2424ca5a9978e243c315, type: 3}
-  untrustfulHuman: {fileID: 2030085778541989638, guid: 99c2b462d6c0b54409663d243083b343, type: 3}
+  follower: {fileID: 2030085778541989638, guid: b25d1124f8ab2424ca5a9978e243c315, type: 3}
+  explorer: {fileID: 2030085778541989638, guid: 99c2b462d6c0b54409663d243083b343, type: 3}
+  spawnZoneTransform: {fileID: 1061511206166753838, guid: e7fdf711980834549b2a56cf0ec42727, type: 3}
