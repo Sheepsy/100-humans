@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Beacon
-  - Human
   - EndZone
   - Obstacle
   - Trap
+  - Creature
+  - Human
   layers:
   - Default
   - TransparentFX

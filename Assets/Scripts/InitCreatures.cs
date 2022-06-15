@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitHumans : MonoBehaviour
+public class InitCreatures : MonoBehaviour
 {
     public GameObject follower;
     public GameObject explorer;
@@ -11,11 +11,11 @@ public class InitHumans : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HumansManager.nbBeginningLevel = HumansManager.nbTrust + HumansManager.nbUntrust;
-        HumansManager.nbLeftLevel = HumansManager.nbBeginningLevel;
-        HumansManager.nbDeadLevel = 0;
-        HumansManager.nbSavedLevel = 0;
-        HumansManager.isLevelStarted = false;
+        CreaturesManager.nbBeginningLevel = CreaturesManager.nbFollowers + CreaturesManager.nbExplorers;
+        CreaturesManager.nbLeftLevel = CreaturesManager.nbBeginningLevel;
+        CreaturesManager.nbDeadLevel = 0;
+        CreaturesManager.nbSavedLevel = 0;
+        CreaturesManager.isLevelStarted = false;
 
         SpawnCreatures();
     }
@@ -32,8 +32,8 @@ public class InitHumans : MonoBehaviour
         float yExplorer = spawnZoneTransform.position.y + spawnZoneTransform.localScale.y / 2 - 0.5f;
         float xLeft = spawnZoneTransform.position.x - spawnZoneTransform.localScale.x / 6f;
         float xRight = spawnZoneTransform.position.x + spawnZoneTransform.localScale.x / 6f;
-        int halfTrust = HumansManager.nbTrust / 2;
-        int halfUntrust = HumansManager.nbUntrust / 2;
+        int halfTrust = CreaturesManager.nbFollowers / 2;
+        int halfUntrust = CreaturesManager.nbExplorers / 2;
 
         for (int i = 0; i < halfTrust; i++)
         {

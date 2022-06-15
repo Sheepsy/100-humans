@@ -6,46 +6,34 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
-    [SerializeField] TrustManager trustManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void EndLevel()
     {
         menu.SetActive(true);
-        int nbHumansTotal = HumansManager.nbBeginningLevel;
-        int nbHumansSaved = HumansManager.nbSavedLevel;
-        print($"You saved {nbHumansSaved} humans from the {nbHumansTotal}!");
+        int nbCreaturesTotal = CreaturesManager.nbBeginningLevel;
+        int nbCreaturesSaved = CreaturesManager.nbSavedLevel;
+        print($"You saved {nbCreaturesSaved} humans from the {nbCreaturesTotal}!");
 
-        // TODO: calcul de la nouvelle confiance
-        float trustLevel = trustManager.computeTrustLevel();
-        trustManager.updateHumansTrust(trustLevel);
-    }
-
-    public void Next()
-    {
-        if (++HumansManager.currentLvl < 4)
+        CreaturesManager.currentLvl++;
+        if (CreaturesManager.currentLvl < 4 && CreaturesManager.nbAlive > 0)
         {
             SceneManager.LoadScene("Management_menu");
         }
         else
         {
-            Quit();
+            SceneManager.LoadScene("MainMenu");
         }
-    }
-
-    public void Quit()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 }

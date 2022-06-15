@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 176859336093273670}
   - component: {fileID: 4212996259556982444}
   m_Layer: 0
-  m_Name: Menu_HumanManager
+  m_Name: Menu_CreaturesManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,10 +862,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  nb_Trust: {fileID: 8327669321261121451}
-  nb_Untrust: {fileID: 5673728984699859627}
-  nb_CollectibleTrust: {fileID: 764177767462992601}
-  nb_CollectibleUntrust: {fileID: 7786772588631568323}
+  nb_Explorers: {fileID: 0}
+  nb_Followers: {fileID: 0}
+  nb_CollectiblesFollower: {fileID: 0}
+  nb_CollectiblesExplorer: {fileID: 0}
 --- !u!1 &5304287020292201385
 GameObject:
   m_ObjectHideFlags: 0

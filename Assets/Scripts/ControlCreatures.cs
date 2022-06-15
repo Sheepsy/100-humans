@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlHumans : MonoBehaviour
+public class ControlCreatures : MonoBehaviour
 {
     public Transform spawnZoneTransform;
     public Transform endZoneTransform;
@@ -28,7 +28,7 @@ public class ControlHumans : MonoBehaviour
     // Updates the direction vector depending on the creature behavior
     void Update()
     {
-        if (HumansManager.isLevelStarted)
+        if (CreaturesManager.isLevelStarted)
         {
             if (explorer)
             {
@@ -43,7 +43,7 @@ public class ControlHumans : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                HumansManager.isLevelStarted = true;
+                CreaturesManager.isLevelStarted = true;
             }
         }
     }
@@ -117,7 +117,7 @@ public class ControlHumans : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (!HumansManager.isLevelStarted)
+        if (!CreaturesManager.isLevelStarted)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pos.z = 0;

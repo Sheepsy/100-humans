@@ -18,15 +18,15 @@ public class Collectibles : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Human"))
+        if (other.CompareTag("Creature"))
         {
             if (trust)
             {
-                HumansManager.nbCollectibleTrust += 1;
+                CreaturesManager.nbCollectiblesFollower += 1;
             }
             else
             {
-                HumansManager.nbCollectibleUntrust += 1;
+                CreaturesManager.nbCollectiblesExplorer += 1;
             }
             this.gameObject.SetActive(false);
         }

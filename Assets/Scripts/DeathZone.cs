@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    [SerializeField] private EndMenu EndMenu;
+    [SerializeField] private EndMenu endMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -20,25 +20,25 @@ public class DeathZone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Human")
+        if (other.tag == "Creature")
         {
-            HumansManager.nbAlive--;
-            HumansManager.nbDeadLevel++;
-            HumansManager.nbLeftLevel--;
-            if (other.gameObject.GetComponent<ControlHumans>().IsFollower())
+            CreaturesManager.nbAlive--;
+            CreaturesManager.nbDeadLevel++;
+            CreaturesManager.nbLeftLevel--;
+            if (other.gameObject.GetComponent<ControlCreatures>().IsFollower())
             {
-                HumansManager.nbTrust--;
+                CreaturesManager.nbFollowers--;
             }
             else
             {
-                HumansManager.nbUntrust--;
+                CreaturesManager.nbExplorers--;
             }
             Destroy(other.gameObject);
-            print("A human is dead...");
+            print("A creature is dead...");
 
-            if (HumansManager.nbLeftLevel == 0)
+            if (CreaturesManager.nbLeftLevel == 0)
             {
-                EndMenu.EndLevel();
+                endMenu.EndLevel();
             }
         }
     }

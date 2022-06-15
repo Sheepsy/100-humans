@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public static class HumansManager
+public static class CreaturesManager
 {
     // For each playthrough
-    public static int nbTrust = 15;
-    public static int nbUntrust = 15;
+    public static int nbFollowers = 15;
+    public static int nbExplorers = 15;
     public static int nbAlive = 30;
-    public static int nbCollectibleTrust = 2;
-    public static int nbCollectibleUntrust = 2;
-
+    public static int nbCollectiblesFollower = 2;
+    public static int nbCollectiblesExplorer = 2;
     public static int currentLvl = 0;
 
     // For each level

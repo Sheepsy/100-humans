@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
-    [SerializeField] private EndMenu EndMenu;
+    [SerializeField] private EndMenu endMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -20,16 +20,16 @@ public class EndLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Human")
+        if (other.tag == "Creature")
         {
-            HumansManager.nbSavedLevel++;
-            HumansManager.nbLeftLevel--;
-            print("Another Human saved!");
+            CreaturesManager.nbSavedLevel++;
+            CreaturesManager.nbLeftLevel--;
+            print("Another creature saved!");
             other.gameObject.SetActive(false);
 
-            if (HumansManager.nbLeftLevel == 0)
+            if (CreaturesManager.nbLeftLevel == 0)
             {
-                EndMenu.EndLevel();
+                endMenu.EndLevel();
             }
         }
     }

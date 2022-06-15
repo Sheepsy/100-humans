@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3450080725448876234}
   - component: {fileID: 1771455331273918483}
   m_Layer: 0
-  m_Name: HumanUntrust
-  m_TagString: Human
+  m_Name: Explorer
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,9 +103,10 @@ MonoBehaviour:
   spawnZoneTransform: {fileID: 1061511206166753838, guid: e7fdf711980834549b2a56cf0ec42727, type: 3}
   endZoneTransform: {fileID: 8367934700569764724, guid: 7f68c8da38ed1db44bfe1ae7b80be132, type: 3}
   moveSpeed: 0.5
-  explorerDetectionRange: 2
+  explorerDetectionRange: 1
   explorer: 1
   derivationFactor: 1
+  direction: {x: 0, y: 0}
 --- !u!50 &2030085778541989755
 Rigidbody2D:
   serializedVersion: 4

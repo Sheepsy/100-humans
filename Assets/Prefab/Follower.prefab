@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3450080725448876234}
   - component: {fileID: 2274057353009281612}
   m_Layer: 0
-  m_Name: HumanTrust
-  m_TagString: Human
+  m_Name: Follower
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   explorerDetectionRange: 0
   explorer: 0
   derivationFactor: 0
+  direction: {x: 0, y: 0}
 --- !u!50 &2030085778541989755
 Rigidbody2D:
   serializedVersion: 4
