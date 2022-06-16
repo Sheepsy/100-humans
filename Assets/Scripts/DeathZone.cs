@@ -9,7 +9,7 @@ public class DeathZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        endMenu = FindObjectOfType<EndMenu>(true);
     }
 
     // Update is called once per frame
