@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
+    int nbLevels = 6;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class EndMenu : MonoBehaviour
         print($"You saved {nbCreaturesSaved} humans from the {nbCreaturesTotal}!");
 
         CreaturesManager.currentLvl++;
-        if (CreaturesManager.currentLvl < 4 && CreaturesManager.nbAlive > 0)
+        if (CreaturesManager.currentLvl < nbLevels && CreaturesManager.nbAlive > 0)
         {
             SceneManager.LoadScene("Management_menu");
         }

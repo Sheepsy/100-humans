@@ -7,7 +7,6 @@ TagManager:
   - Beacon
   - EndZone
   - Obstacle
-  - Trap
   - Creature
   - Human
   layers:
