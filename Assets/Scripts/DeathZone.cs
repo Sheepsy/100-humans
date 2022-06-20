@@ -5,11 +5,13 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
     [SerializeField] private EndMenu endMenu;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         endMenu = FindObjectOfType<EndMenu>(true);
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class DeathZone : MonoBehaviour
     {
         if (other.tag == "Creature")
         {
+            anim.SetTrigger("isTrapTriggered");
             CreaturesManager.nbAlive--;
             CreaturesManager.nbDeadLevel++;
             CreaturesManager.nbLeftLevel--;

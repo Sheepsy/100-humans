@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1805416792403629979}
   - component: {fileID: -6321364203920552733}
   - component: {fileID: 6827424521940757430}
+  - component: {fileID: 5876290950634435402}
   m_Layer: 0
   m_Name: DeadlyObstacle
   m_TagString: Untagged
@@ -125,3 +126,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endMenu: {fileID: 167792828255316355, guid: 77749e22a40754d40b0b4d6ab0703e32, type: 3}
+--- !u!95 &5876290950634435402
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446000958255881514}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f3be4a9948681c43b0928ffae48eda1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
