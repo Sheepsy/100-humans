@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     [SerializeField] GameObject menu;
-    int nbLevels = 6;
+    int nbLevels = 5;
 
     // Start is called before the first frame update
     void Start()

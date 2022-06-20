@@ -20,7 +20,7 @@ public class Menu_CreaturesManager : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Lvl" + (CreaturesManager.currentLvl + 1).ToString());
+        SceneManager.LoadScene("Scenes/Lvl" + (CreaturesManager.currentLvl + 1).ToString());
     }
 
     public void SwapTrust()
