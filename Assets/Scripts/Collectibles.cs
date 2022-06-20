@@ -29,11 +29,11 @@ public class Collectibles : MonoBehaviour
         {
             if (trust)
             {
-                CreaturesManager.nbCollectiblesFollower += 3;
+                CreaturesManager.nbCollectiblesFollower += 2;
             }
             else
             {
-                CreaturesManager.nbCollectiblesExplorer += 3;
+                CreaturesManager.nbCollectiblesExplorer += 2;
             }
             this.gameObject.SetActive(false);
         }
