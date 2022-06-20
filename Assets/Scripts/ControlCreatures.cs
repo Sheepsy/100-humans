@@ -162,4 +162,10 @@ public class ControlCreatures : MonoBehaviour
     {
         return direction;
     }
+
+    public float GetSpeed()
+    {
+        return moveSpeed;
+    }
+
 }

@@ -8,7 +8,7 @@ public class Collectibles : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        print("collectible");
     }
 
     // Update is called once per frame
@@ -16,17 +16,24 @@ public class Collectibles : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+
+    void OnCollisionEnter(Collision col)
     {
-        if (other.CompareTag("Creature"))
+        print("collision 2");
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        print("collision");
+        if (other.tag == "Creature")
         {
             if (trust)
             {
-                CreaturesManager.nbCollectiblesFollower += 1;
+                CreaturesManager.nbCollectiblesFollower += 3;
             }
             else
             {
-                CreaturesManager.nbCollectiblesExplorer += 1;
+                CreaturesManager.nbCollectiblesExplorer += 3;
             }
             this.gameObject.SetActive(false);
         }

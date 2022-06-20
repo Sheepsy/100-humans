@@ -61,5 +61,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beacon: {fileID: 3552408757241292972, guid: 3171f6c0f15e3bb4a80938f4eccdffbf, type: 3}
-  maxBeacons: 5
+  maxBeacons: 10
   beaconLifeSpan: 5

@@ -11,10 +11,11 @@ GameObject:
   - component: {fileID: 612053882706698407}
   - component: {fileID: 1805416792403629979}
   - component: {fileID: -6321364203920552733}
-  - component: {fileID: 6827424521940757430}
+  - component: {fileID: 8493553746067604762}
+  - component: {fileID: 7115900894451481960}
   m_Layer: 0
-  m_Name: DeadlyObstacle
-  m_TagString: Untagged
+  m_Name: Wall border
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2446000958255881514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 5, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,9 +50,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.96999997, y: 0.59999996, z: 0.96999997, w: 0.59999996}
+    border: {x: 0.29999998, y: 0.29999998, z: 0.29999998, w: 0.29999998}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.79, y: 3.82}
+    oldSize: {x: 3.76, y: 3.8}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -100,8 +101,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 53e63920095904b4b94de609c55894eb, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b42f525a126ed844fa0040a7031e1918, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,7 +113,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6827424521940757430
+--- !u!50 &8493553746067604762
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2446000958255881514}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7115900894451481960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

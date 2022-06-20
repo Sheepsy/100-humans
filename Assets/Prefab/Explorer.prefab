@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnZoneTransform: {fileID: 1061511206166753838, guid: e7fdf711980834549b2a56cf0ec42727, type: 3}
   endZoneTransform: {fileID: 8367934700569764724, guid: 7f68c8da38ed1db44bfe1ae7b80be132, type: 3}
-  moveSpeed: 0.5
+  moveSpeed: 0.8
   explorerDetectionRange: 1
   explorer: 1
   derivationFactor: 1
