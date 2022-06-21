@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FollowersTraps : MonoBehaviour
 {
+    public GameObject trapAnimation;
+    public GameObject trap;
     [SerializeField] private float minTimeBetweenTraps;
     [SerializeField] private float maxTimeBetweenTraps;
     [SerializeField] private float secondsBeforeTrap;
@@ -24,6 +26,7 @@ public class FollowersTraps : MonoBehaviour
         if (!trapsLaunched && CreaturesManager.isLevelStarted)
         {
             trapsLaunched = true;
+            Invoke("LaunchTrap", Random.Range(minTimeBetweenTraps, maxTimeBetweenTraps));
         }
     }
 
@@ -32,8 +35,22 @@ public class FollowersTraps : MonoBehaviour
         if (followersOnStage)
         {
             Vector2 avgFuturePos = GetAverageFollowerPosition(secondsBeforeTrap);
+            StartCoroutine(InvokeTrap(avgFuturePos));
 
             Invoke("LaunchTrap", Random.Range(minTimeBetweenTraps, maxTimeBetweenTraps));
+        }
+    }
+
+    IEnumerator InvokeTrap(Vector2 pos)
+    {
+        if (followersOnStage)
+        {
+            GameObject curTrapAnim = Instantiate(trapAnimation, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+            yield return new WaitForSeconds(secondsBeforeTrap);
+            Destroy(curTrapAnim);
+            GameObject curTrap = Instantiate(trap, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+            yield return new WaitForSeconds(trapLifeSpan);
+            Destroy(curTrap);
         }
     }
 
