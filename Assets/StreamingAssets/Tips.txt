@@ -1,0 +1,5 @@
+<b><color="green">Green</color></b> Wigglys are intelligent and will explore by themselves.<br><b>Right click</b> to put stinky gaz to repulse them.<br><b><color="blue">Blue</color></b> Wigglys are dumb and will follow your lead.<br><b>Left click</b> to guide them. Beware, traps will appear to catch them!
+<b><color="green">Green</color></b> Wigglys can't see traps, but they can see <b>walls</b> and avoid them.<br>Also, they will avoid to get out of the stage!
+Some <b>deadly invisible gaz</b> fell over the stage... Only <b><color=green>intelligent</color></b> Wigglys could smell it.<br>Use them wisely!
+Don't forget you can <b>drag and drop</b> your creatures wherever you like before each stage.
+Did you keep enough <b><color="green">lime</color></b>? It could come in handy.

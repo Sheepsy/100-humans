@@ -12,6 +12,8 @@ public class Menu_CreaturesManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI nb_Followers;
     [SerializeField] TextMeshProUGUI nb_CollectiblesFollower;
     [SerializeField] TextMeshProUGUI nb_CollectiblesExplorer;
+    [SerializeField] TextMeshProUGUI tips;
+    [SerializeField] string pathTips;
 
     private int start_nbFollowers;
     private int start_nbExplorers;
@@ -74,13 +76,20 @@ public class Menu_CreaturesManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Creatures values
         start_nbFollowers = CreaturesManager.nbFollowers;
         start_nbExplorers = CreaturesManager.nbExplorers;
         start_nbCollectiblesFollower = CreaturesManager.nbCollectiblesFollower;
         start_nbCollectiblesExplorer = CreaturesManager.nbCollectiblesExplorer;
         UpdateValue();
 
+        // Sound Player
         soundPlayer = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayer>();
+
+        // Tips for next level
+        pathTips = Application.streamingAssetsPath + pathTips;
+        string[] lines = System.IO.File.ReadAllLines(pathTips);
+        tips.text = lines[CreaturesManager.currentLvl];
     }
 
     // Update is called once per frame

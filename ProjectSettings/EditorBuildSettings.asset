@@ -12,24 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Management_Menu.unity
     guid: 5c25953fe77bb474ebe4f3d2c2e80089
   - enabled: 1
+    path: Assets/Scenes/Lvl1.unity
+    guid: 289186ac117ba1d45a7a07f226d4fa84
+  - enabled: 1
+    path: Assets/Scenes/Lvl2.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
     path: Assets/Scenes/Lvl3.unity
     guid: dc265caf43460074688b3c6982a312c8
   - enabled: 1
     path: Assets/Scenes/Lvl4.unity
     guid: 3c36af87a99fdee479ed24cd3eb432a8
   - enabled: 1
-    path: Assets/Scenes/Lvl2.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Lvl4.unity
-    guid: 477a1cd3679d9ae4ba4890428f03fb54
-  - enabled: 1
     path: Assets/Scenes/Lvl5.unity
-    guid: 289186ac117ba1d45a7a07f226d4fa84
-  - enabled: 1
-    path: Assets/Scenes/Lvl5.unity
-    guid: b4977a6bf3610a44c8a572528b21024a
-  - enabled: 0
-    path: Assets/Scenes/MiniGame1.unity
-    guid: b09e18fb45ddf9a40860bc99622eb888
+    guid: 801c7f8bbabef67429129cca0ea710d1
   m_configObjects: {}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1433476165926370422}
   - component: {fileID: 1433476165926370421}
   - component: {fileID: 2112946734238889145}
+  - component: {fileID: -4519800427208175173}
   m_Layer: 0
   m_Name: CreaturesManager
   m_TagString: Untagged
@@ -63,3 +64,21 @@ MonoBehaviour:
   beacon: {fileID: 3552408757241292972, guid: 3171f6c0f15e3bb4a80938f4eccdffbf, type: 3}
   maxBeacons: 10
   beaconLifeSpan: 5
+--- !u!114 &-4519800427208175173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433476165926370420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172409506fb454f46b04e941475456bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapAnimation: {fileID: 1740801498021318997, guid: 3d2bf25a3a9dcef4ebdf7cf469491c95, type: 3}
+  trap: {fileID: 2446000958255881514, guid: 85f08bcffb90249448d96156cc715477, type: 3}
+  minTimeBetweenTraps: 2
+  maxTimeBetweenTraps: 5
+  secondsBeforeTrap: 2
+  trapLifeSpan: 1
