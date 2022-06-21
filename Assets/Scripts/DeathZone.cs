@@ -25,10 +25,13 @@ public class DeathZone : MonoBehaviour
         if (other.tag == "Creature")
         {
             anim.SetTrigger("isTrapTriggered");
+            
+            ControlCreatures ccreatures = other.gameObject.GetComponent<ControlCreatures>();
+
             CreaturesManager.nbAlive--;
             CreaturesManager.nbDeadLevel++;
             CreaturesManager.nbLeftLevel--;
-            if (other.gameObject.GetComponent<ControlCreatures>().IsFollower())
+            if (ccreatures.IsFollower())
             {
                 CreaturesManager.nbFollowers--;
             }
@@ -36,9 +39,10 @@ public class DeathZone : MonoBehaviour
             {
                 CreaturesManager.nbExplorers--;
             }
-            Destroy(other.gameObject);
-            print("A creature is dead...");
 
+            ccreatures.GetSoundPlayer().PlayDeathSound(ccreatures.GetPitch());
+            Destroy(other.gameObject);
+            
             if (CreaturesManager.nbLeftLevel == 0)
             {
                 endMenu.EndLevel();

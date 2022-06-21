@@ -11,8 +11,14 @@ public class ControlCreatures : MonoBehaviour
     [SerializeField] private float explorerDetectionRange;
     [SerializeField] private bool explorer = true;
     [SerializeField] private float derivationFactor = 0.5f;
-    public Vector2 direction;
+    [SerializeField] private Vector2 direction;
     private Vector2 explorerDerivation;
+
+    [Header("Sound settings")]
+    [SerializeField] private float minPitch;
+    [SerializeField] private float maxPitch;
+    private float pitch;
+    private SoundPlayer soundPlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +29,9 @@ public class ControlCreatures : MonoBehaviour
         {
             InvokeRepeating("RandomDerivation", 0, Random.Range(0.5f, 2f));
         }
+
+        pitch = Random.Range(minPitch, maxPitch);
+        soundPlayer = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayer>();
     }
 
     // Updates the direction vector depending on the creature behavior
@@ -115,6 +124,11 @@ public class ControlCreatures : MonoBehaviour
         }
     }
 
+    private void OnMouseDown()
+    {
+        soundPlayer.PlayHuhSound(pitch);
+    }
+
     private void OnMouseDrag()
     {
         if (!CreaturesManager.isLevelStarted)
@@ -124,8 +138,8 @@ public class ControlCreatures : MonoBehaviour
 
             float leftBorder = spawnZoneTransform.position.x - spawnZoneTransform.localScale.x / 2;
             float rightBorder = spawnZoneTransform.position.x + spawnZoneTransform.localScale.x / 2;
-            float downBorder = spawnZoneTransform.position.y - spawnZoneTransform.localScale.y / 2;
-            float upBorder = spawnZoneTransform.position.y + spawnZoneTransform.localScale.y / 2;
+            float downBorder = -4.8f;
+            float upBorder = 4.8f;
             
             if (pos.x < leftBorder)
             {
@@ -168,4 +182,13 @@ public class ControlCreatures : MonoBehaviour
         return moveSpeed;
     }
 
+    public SoundPlayer GetSoundPlayer()
+    {
+        return soundPlayer;
+    }
+
+    public float GetPitch()
+    {
+        return pitch;
+    }
 }

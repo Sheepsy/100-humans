@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Creature
   - Human
+  - SoundPlayer
   layers:
   - Default
   - TransparentFX

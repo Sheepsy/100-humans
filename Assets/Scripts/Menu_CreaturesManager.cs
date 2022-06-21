@@ -18,6 +18,11 @@ public class Menu_CreaturesManager : MonoBehaviour
     private int start_nbCollectiblesFollower;
     private int start_nbCollectiblesExplorer;
 
+    [Header("Sound settings")]
+    [SerializeField] private float minPitch;
+    [SerializeField] private float maxPitch;
+    private SoundPlayer soundPlayer;
+
     public void Play()
     {
         SceneManager.LoadScene("Scenes/Lvl" + (CreaturesManager.currentLvl + 1).ToString());
@@ -30,6 +35,8 @@ public class Menu_CreaturesManager : MonoBehaviour
             CreaturesManager.nbCollectiblesFollower -= 1;
             CreaturesManager.nbExplorers -= 1;
             CreaturesManager.nbFollowers += 1;
+
+            soundPlayer.PlayYumSound(Random.Range(minPitch, maxPitch));
         }
         UpdateValue();
     }
@@ -41,6 +48,8 @@ public class Menu_CreaturesManager : MonoBehaviour
             CreaturesManager.nbCollectiblesExplorer -= 1;
             CreaturesManager.nbFollowers -= 1;
             CreaturesManager.nbExplorers += 1;
+
+            soundPlayer.PlayYuckSound(Random.Range(minPitch, maxPitch));
         }
         UpdateValue();
     }
@@ -70,6 +79,8 @@ public class Menu_CreaturesManager : MonoBehaviour
         start_nbCollectiblesFollower = CreaturesManager.nbCollectiblesFollower;
         start_nbCollectiblesExplorer = CreaturesManager.nbCollectiblesExplorer;
         UpdateValue();
+
+        soundPlayer = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayer>();
     }
 
     // Update is called once per frame
