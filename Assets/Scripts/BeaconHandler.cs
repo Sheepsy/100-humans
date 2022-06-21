@@ -32,7 +32,11 @@ public class BeaconHandler : MonoBehaviour
 
     IEnumerator DestroyBeacon()
     {
+        GameObject beaconToDestroy = beaconsQueue.Dequeue();
+        Animator animator = beaconToDestroy.GetComponent<Animator>();
         yield return new WaitForSeconds(beaconLifeSpan);
-        Destroy(beaconsQueue.Dequeue());
+        animator.SetBool("isPresent", false);
+        yield return new WaitForSeconds(0.2f);
+        Destroy(beaconToDestroy);
     }
 }
