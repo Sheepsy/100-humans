@@ -39,7 +39,7 @@ public class InitCreatures : MonoBehaviour
         {
             Instantiate(follower, new Vector3(xLeft, yFollower + 0.5f * i, 0), Quaternion.identity);
         }
-        if (halfTrust % 2 == 1)
+        if (CreaturesManager.nbFollowers % 2 == 1)
         {
             halfTrust++;
         }
@@ -52,7 +52,7 @@ public class InitCreatures : MonoBehaviour
         {
             Instantiate(explorer, new Vector3(xRight, yExplorer - 0.5f * i, 0), Quaternion.identity);
         }
-        if (halfUntrust % 2 == 1)
+        if (CreaturesManager.nbExplorers % 2 == 1)
         {
             halfUntrust++;
         }
