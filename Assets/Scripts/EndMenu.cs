@@ -34,7 +34,7 @@ public class EndMenu : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("EndingMenu");
         }
     }
 }

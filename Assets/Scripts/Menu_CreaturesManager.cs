@@ -14,6 +14,7 @@ public class Menu_CreaturesManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI nb_CollectiblesExplorer;
     [SerializeField] TextMeshProUGUI tips;
     [SerializeField] string pathTips;
+    [SerializeField] SpriteRenderer nextLevel;
 
     private int start_nbFollowers;
     private int start_nbExplorers;
@@ -85,6 +86,9 @@ public class Menu_CreaturesManager : MonoBehaviour
 
         // Sound Player
         soundPlayer = GameObject.FindWithTag("SoundPlayer").GetComponent<SoundPlayer>();
+
+        // Next level image
+        nextLevel.sprite = LvlMaps[CreaturesManager.currentLvl];
 
         // Tips for next level
         pathTips = Application.streamingAssetsPath + pathTips;
