@@ -107,6 +107,8 @@ MonoBehaviour:
   explorer: 0
   derivationFactor: 0
   direction: {x: 0, y: 0}
+  minPitch: 0.75
+  maxPitch: 1.25
 --- !u!50 &2030085778541989755
 Rigidbody2D:
   serializedVersion: 4

@@ -22,10 +22,14 @@ public class EndLevel : MonoBehaviour
     {
         if (other.tag == "Creature")
         {
+            ControlCreatures ccreatures = other.gameObject.GetComponent<ControlCreatures>();
+
             CreaturesManager.nbSavedLevel++;
             CreaturesManager.nbLeftLevel--;
             print("Another creature saved!");
             other.gameObject.SetActive(false);
+
+            ccreatures.GetSoundPlayer().PlayJoySound(ccreatures.GetPitch());
 
             if (CreaturesManager.nbLeftLevel == 0)
             {
